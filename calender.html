@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calender.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Calender</title>
+</head>
+
+<body>
+    <section class="calenderDiv" style="width:80%; height:84vh">
+        <div class="container-fluid" style="height:100%">
+            <div class="row" style="height:100%">
+                <div class="calenderDatesDiv col-lg-8">
+                    <div class="calenderWrapper align-items-center">
+                        <h1 id="calenderTitle">Events '23</h1>
+                        <div id="stars"></div>
+                        <div id="stars2"></div>
+                    </div>
+                    <table class="calenderTable">
+                        <thead style="height: 33%;">
+                            <tr>
+                                <th class="vertical-middle">Month</th>
+                                <th class="vertical-middle">Sun</th>
+                                <th class="vertical-middle">Mon</th>
+                                <th class="vertical-middle">Tue</th>
+                                <th class="vertical-middle">Wed</th>
+                                <th class="vertical-middle">Thu</th>
+                                <th class="vertical-middle">Fri</th>
+                                <th class="vertical-middle">Sat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height: 33%;">
+                                <th class="vertical-middle">Sept</th>
+                                <td class="redundant-dates"></td>
+                                <td class="redundant-dates"></td>
+                                <td class="redundant-dates"></td>
+                                <td><button class="date-button" onclick="toggleAccordion('accordion1')">
+                                        27</button></td>
+                                <td><button class="date-button" onclick="toggleAccordion('accordion2')">
+                                        28</button></td>
+                                <td><button class="date-button" onclick="toggleAccordion('accordion3')">
+                                        29</button></td>
+                                <td><button class="date-button" onclick="toggleAccordion('accordion4')">
+                                        30</button></td>
+                            </tr>
+                            <tr style="height: 33%;">
+                                <th>Oct</th>
+                                <td class=" redundant-dates vertical-middle">1</td>
+                                <td class=" redundant-dates vertical-middle">2</td>
+                                <td><button class="date-button" onclick="toggleAccordion('accordion5')">
+                                        3</button></td>
+                                <td><button class="date-button" onclick="toggleAccordion('accordion6')">
+                                        4</button></td>
+                                <td><button class="date-button" onclick="toggleAccordion('accordion7')">
+                                        5</button></td>
+                                <td class="redundant-dates">6</td>
+                                <td><button class="date-button" onclick="toggleAccordion('accordion8')">
+                                        7</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calenderCardsDiv col-lg-4 p-2">
+                    <div id="stars"></div>
+                    <div id="stars2"></div>
+                    <div id="accordion1" class="accordion-content" style="display: none;">
+                        <button class="panel-button" onclick="togglePanel('panel1')">Art Beyond Brushes</button>
+                        <div id="panel1" class="panel-content" style="display: none;">
+                            <div class="container">
+                                <div class="eventCard align-items-center align-content-center">
+                                    <div class="eventImgBx align-items-center align-content-center">
+                                        <img src="assets/brushless painting.jpg" alt="event_poster" height="250px">
+                                    </div>
+                                    <div class="eventContentBx">
+                                        <h3>Art Beyond Brushes</h3>
+                                        <div class="size">
+                                            <h4>Team Size:</h4>
+                                            <span>1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                        </div>
+                                        <a href="#">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accordion2" class="accordion-content" style="display: none;">
+                        <button class="panel-button" onclick="togglePanel('panel3')">CodeBreak</button>
+                        <div id="panel3" class="panel-content" style="display: none;">
+                            <div class="container">
+                                <div class="eventCard align-items-center align-content-center">
+                                    <div class="eventImgBx align-items-center align-content-center">
+                                        <img src="assets/brushless painting.jpg" alt="event_poster" height="250px">
+                                    </div>
+                                    <div class="eventContentBx">
+                                        <h3>Code Break</h3>
+                                        <div class="size">
+                                            <h4>Team Size:</h4>
+                                            <span>1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                        </div>
+                                        <a href="#">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button class="panel-button" onclick="togglePanel('panel4')">Thesis Thrive</button>
+                        <div id="panel4" class="panel-content" style="display: none;">
+                            <div class="container">
+                                <div class="eventCard align-items-center align-content-center">
+                                    <div class="eventImgBx align-items-center align-content-center">
+                                        <img src="assets/brushless painting.jpg" alt="event_poster" height="250px">
+                                    </div>
+                                    <div class="eventContentBx">
+                                        <h3>Thesis Thrive</h3>
+                                        <div class="size">
+                                            <h4>Team Size:</h4>
+                                            <span>1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                        </div>
+                                        <a href="#">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accordion3" class="accordion-content" style="display: none;">
+                        <button class="panel-button" onclick="togglePanel('panel5')">Tech Puzzle Unscramble</button>
+                        <div id="panel5" class="panel-content" style="display: none;">
+                            <div class="container">
+                                <div class="eventCard align-items-center align-content-center">
+                                    <div class="eventImgBx align-items-center align-content-center">
+                                        <img src="assets/brushless painting.jpg" alt="event_poster" height="250px">
+                                    </div>
+                                    <div class="eventContentBx">
+                                        <h3>Code Break</h3>
+                                        <div class="size">
+                                            <h4>Team Size:</h4>
+                                            <span>1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                        </div>
+                                        <a href="#">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accordion4" class="accordion-content" style="display: none;">
+                        <button class="panel-button" onclick="togglePanel('panel7')"> Flutter Fest</button>
+                        <div id="panel7" class="panel-content" style="display: none;">
+                            <div class="container">
+                                <div class="eventCard align-items-center align-content-center">
+                                    <div class="eventImgBx align-items-center align-content-center">
+                                        <img src="assets/brushless painting.jpg" alt="event_poster" height="250px">
+                                    </div>
+                                    <div class="eventContentBx">
+                                        <h3>Code Break</h3>
+                                        <div class="size">
+                                            <h4>Team Size:</h4>
+                                            <span>1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                        </div>
+                                        <a href="#">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div id="accordion5" class="accordion-content" style="display: none;">
+                        <button class="panel-button" onclick="togglePanel('panel9')">Math Tale Housie</button>
+                        <div id="panel9" class="panel-content" style="display: none;">
+                            <div class="container">
+                                <div class="eventCard align-items-center align-content-center">
+                                    <div class="eventImgBx align-items-center align-content-center">
+                                        <img src="assets/brushless painting.jpg" alt="event_poster" height="250px">
+                                    </div>
+                                    <div class="eventContentBx">
+                                        <h3>Code Break</h3>
+                                        <div class="size">
+                                            <h4>Team Size:</h4>
+                                            <span>1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                        </div>
+                                        <a href="#">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button class="panel-button" onclick="togglePanel('panel10')">Ladder Logic</button>
+                        <div id="panel10" class="panel-content" style="display: none;">
+                            <div class="container">
+                                <div class="eventCard align-items-center align-content-center">
+                                    <div class="eventImgBx align-items-center align-content-center">
+                                        <img src="assets/brushless painting.jpg" alt="event_poster" height="250px">
+                                    </div>
+                                    <div class="eventContentBx">
+                                        <h3>Code Break</h3>
+                                        <div class="size">
+                                            <h4>Team Size:</h4>
+                                            <span>1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                        </div>
+                                        <a href="#">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accordion6" class="accordion-content" style="display: none;">
+                        <button class="panel-button" onclick="togglePanel('panel11')">Mystic Code</button>
+                        <div id="panel11" class="panel-content" style="display: none;">
+                            <div class="container">
+                                <div class="eventCard align-items-center align-content-center">
+                                    <div class="eventImgBx align-items-center align-content-center">
+                                        <img src="assets/brushless painting.jpg" alt="event_poster" height="250px">
+                                    </div>
+                                    <div class="eventContentBx">
+                                        <h3>Code Break</h3>
+                                        <div class="size">
+                                            <h4>Team Size:</h4>
+                                            <span>1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                        </div>
+                                        <a href="#">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div id="accordion7" class="accordion-content" style="display: none;">
+                        <button class="panel-button" onclick="togglePanel('panel13')">PitchFest</button>
+                        <div id="panel13" class="panel-content" style="display: none;">
+                            <div class="container">
+                                <div class="eventCard align-items-center align-content-center">
+                                    <div class="eventImgBx align-items-center align-content-center">
+                                        <img src="assets/brushless painting.jpg" alt="event_poster" height="250px">
+                                    </div>
+                                    <div class="eventContentBx">
+                                        <h3>Code Break</h3>
+                                        <div class="size">
+                                            <h4>Team Size:</h4>
+                                            <span>1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                        </div>
+                                        <a href="#">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button class="panel-button" onclick="togglePanel('panel14')">TechnoTussle</button>
+                        <div id="panel14" class="panel-content" style="display: none;">
+                            <div class="container">
+                                <div class="eventCard align-items-center align-content-center">
+                                    <div class="eventImgBx align-items-center align-content-center">
+                                        <img src="assets/brushless painting.jpg" alt="event_poster" height="250px">
+                                    </div>
+                                    <div class="eventContentBx">
+                                        <h3>Code Break</h3>
+                                        <div class="size">
+                                            <h4>Team Size:</h4>
+                                            <span>1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                        </div>
+                                        <a href="#">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accordion9" class="accordion-content" style="display: none;">
+                        <button class="panel-button" onclick="togglePanel('panel17')">IEEE Day 2023</button>
+                        <div id="panel17" class="panel-content" style="display: none;">
+                            <div class="container">
+                                <div class="eventCard align-items-center align-content-center">
+                                    <div class="eventImgBx align-items-center align-content-center">
+                                        <img src="assets/brushless painting.jpg" alt="event_poster" height="250px">
+                                    </div>
+                                    <div class="eventContentBx">
+                                        <h3>Code Break</h3>
+                                        <div class="size">
+                                            <h4>Team Size:</h4>
+                                            <span>1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                        </div>
+                                        <a href="#">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    </div>
+    <script>
+        // btn.addEventListener('click', function onClick() {
+
+        // });
+
+        function toggleAccordion(accordionId) {
+            var accordion = document.getElementById(accordionId);
+            if (accordion.style.display === "block") {
+                accordion.style.display = "none";
+            } else {
+                // Hide all accordions first
+                var allAccordions = document.querySelectorAll('.accordion-content');
+                for (var i = 0; i < allAccordions.length; i++) {
+                    allAccordions[i].style.display = "none";
+                }
+
+                // Then show the selected accordion
+                accordion.style.display = "block";
+
+                // Hide all panel buttons first
+                var allButtons = document.querySelectorAll('.panel-button');
+                for (var i = 0; i < allButtons.length; i++) {
+                    allButtons[i].style.display = "none";
+                }
+
+                // Show the buttons corresponding to the selected accordion
+                var buttons = accordion.querySelectorAll('.panel-button');
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].style.display = "block";
+                }
+            }
+        }
+
+        function togglePanel(panelId) {
+            var panel = document.getElementById(panelId);
+            var allPanels = document.querySelectorAll('.panel-content');
+
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                for (var i = 0; i < allPanels.length; i++) {
+                    allPanels[i].style.display = "none";
+                }
+                panel.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- 
+    
+ -->
